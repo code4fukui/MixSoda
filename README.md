@@ -1,4 +1,4 @@
-# MixSoda util
+# MixSoda-util
 
 utilities for [MixSoda](https://mixsoda.shizentai.jp/)
 
@@ -37,7 +37,7 @@ jobs:
         env:
           SECRET_CODE: ${{ secrets.code }}
         run: |
-          deno run -A https://code4fukui.github.io/MixSoda/backup.js $SECRET_CODE
+          deno run -A https://code4fukui.github.io/MixSoda-util/backup.js $SECRET_CODE
       - name: commit and push
         run: |
           git config --global user.email "workflow@example.com"
