@@ -1,7 +1,8 @@
 # MixSoda util
 
-
-deno run -A backup.js testtest_b all
+```sh
+deno run -A backup.js [code] (allflg)
+```
 
 ### setup
 
