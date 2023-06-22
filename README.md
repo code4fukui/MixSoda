@@ -31,7 +31,7 @@ jobs:
           deno-version: v1.x
       - name: make
         run: |
-          deno run -A https://code4fukui.github.io/MixSoda/backupdata.js
+          deno run -A https://code4fukui.github.io/MixSoda/backup.js ${{secrets.code}}
       - name: commit and push
         run: |
           git config --global user.email "workflow@example.com"
