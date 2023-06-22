@@ -1,5 +1,9 @@
 # MixSoda util
 
+utilities for [MixSoda](https://mixsoda.shizentai.jp/)
+
+## backup tool
+
 ```sh
 deno run -A backup.js [code] (allflg)
 ```
