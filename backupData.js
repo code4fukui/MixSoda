@@ -1,5 +1,5 @@
 import { CSV } from "https://js.sabae.cc/CSV.js";
-import { DateTime, Day } from "https://js.sabae.cc/DateTime.js";
+import { DateTime, Day, TimeZone } from "https://js.sabae.cc/DateTime.js";
 import { ArrayUtil } from "https://js.sabae.cc/ArrayUtil.js";
 
 export const backupData = async (code, allflg = false) => {
@@ -8,7 +8,7 @@ export const backupData = async (code, allflg = false) => {
   const data0 = await CSV.fetchJSON(url);
   const data = data0.map(d => {
     const dt0 = new DateTime(d.utc * 1000);
-    const dt = dt0.toString(); //.substring(0, 19).replace("T", " ");
+    const dt = dt0.toLocal(TimeZone.JST).toString(); //.substring(0, 19).replace("T", " ");
     //d.dt = dt.toString().substring(0, 10).replace("T", " ");
     const data = parseInt(d.data, 16);
     const iccid = d.iccid;
