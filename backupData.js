@@ -3,7 +3,10 @@ import { DateTime, Day, TimeZone } from "https://js.sabae.cc/DateTime.js";
 import { ArrayUtil } from "https://js.sabae.cc/ArrayUtil.js";
 
 export const backupData = async (code, allflg = false) => {
-  const savedate = allflg ? null : new Day().dayBefore(1);
+  const savedate = allflg ? null : new DateTime().toLocal(TimeZone.JST).day.dayBefore(1);
+  if (!allflg) {
+    console.log("savedate", new DateTime().toLocal(TimeZone.JST).day.dayBefore(1))
+  }
   const url = "http://mixsoda.io:2048/" + code + ".csv?from=" + (7 * 24 * 60 * 60);
   const data0 = await CSV.fetchJSON(url);
   const data = data0.map(d => {
