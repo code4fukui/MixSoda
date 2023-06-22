@@ -30,8 +30,10 @@ jobs:
         with:
           deno-version: v1.x
       - name: make
+        env:
+          SECRET_CODE: ${{ secrets.code }}
         run: |
-          deno run -A https://code4fukui.github.io/MixSoda/backup.js ${{secrets.code}}
+          deno run -A https://code4fukui.github.io/MixSoda/backup.js $SECRET_CODE
       - name: commit and push
         run: |
           git config --global user.email "workflow@example.com"
@@ -40,3 +42,6 @@ jobs:
           git commit -m 'update data' && git push ${REPO} HEAD:${{github.event.pull_request.head.ref}} || true
           git push
 ```
+
+set secret code ([Encrypted secrets - GitHub Docs](https://docs.github.com/en/actions/security-guides/encrypted-secrets))
+
