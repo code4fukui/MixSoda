@@ -5,7 +5,7 @@ utilities for [MixSoda](https://mixsoda.shizentai.jp/)
 ## backup yesterday data
 
 ```sh
-deno run -A https://code4fukui.github.io/MixSoda-util/backup.js [code] (allflg)
+deno run -A https://code4fukui.github.io/MixSoda-util/backup.js [Store Token] (allflg)
 ```
 
 ### setup
@@ -35,9 +35,9 @@ jobs:
           deno-version: v1.x
       - name: make
         env:
-          SECRET_CODE: ${{ secrets.code }}
+          SECRET_TOKEN: ${{ secrets.token }}
         run: |
-          deno run -A https://code4fukui.github.io/MixSoda-util/backup.js $SECRET_CODE
+          deno run -A https://code4fukui.github.io/MixSoda-util/backup.js $SECRET_TOKEN
       - name: commit and push
         run: |
           git config --global user.email "workflow@example.com"
