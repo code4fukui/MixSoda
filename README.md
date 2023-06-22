@@ -2,10 +2,10 @@
 
 utilities for [MixSoda](https://mixsoda.shizentai.jp/)
 
-## backup tool
+## backup yesterday data
 
 ```sh
-deno run -A backup.js [code] (allflg)
+deno run -A https://code4fukui.github.io/MixSoda-util/backup.js [code] (allflg)
 ```
 
 ### setup
