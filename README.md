@@ -5,7 +5,7 @@ utilities for [MixSoda](https://mixsoda.shizentai.jp/)
 ## backup yesterday data
 
 ```sh
-deno run -A https://code4fukui.github.io/MixSoda-util/backup.js [Store Token] (allflg)
+deno run -A https://code4fukui.github.io/MixSoda-util/backup.js [Store Token] (all)
 ```
 
 ### setup
