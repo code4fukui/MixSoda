@@ -8,6 +8,11 @@ utilities for [MixSoda](https://mixsoda.shizentai.jp/)
 deno run -A https://code4fukui.github.io/MixSoda-util/backup.js [Store Token] (all)
 ```
 
+to make iccid/all.csv
+```sh
+deno run -A https://code4fukui.github.io/MixSoda-util/makeBackupAll.js
+```
+
 ### setup
 
 ```sh
