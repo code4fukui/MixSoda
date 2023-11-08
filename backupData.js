@@ -13,7 +13,7 @@ export const backupData = async (code, allflg = false) => {
     const dt0 = new DateTime(d.utc * 1000);
     const dt = dt0.toLocal(TimeZone.JST).toString(); //.substring(0, 19).replace("T", " ");
     //d.dt = dt.toString().substring(0, 10).replace("T", " ");
-    const data = parseInt(d.data, 16);
+    const data = d.data.length <= 8 ? parseInt(d.data, 16) : d.data;
     const iccid = d.iccid;
     return { dt, data, iccid };
   });
